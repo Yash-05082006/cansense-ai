@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 217 33% 17%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 217 33% 17%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 142 71% 45%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 25% 65%;
+
+    --accent: 217 33% 22%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 24%;
+    --input: 217 33% 24%;
+    --ring: 142 71% 45%;
+
+    --radius: 0.5rem;
+
+    /* CaneSense custom tokens */
+    --grade-a: 142 71% 45%;
+    --grade-b: 38 92% 50%;
+    --grade-c: 0 84% 60%;
+    --info: 213 94% 68%;
+    --warning: 38 92% 50%;
+    --critical: 0 84% 60%;
+
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 215 25% 65%;
+    --sidebar-primary: 142 71% 45%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 217 33% 14%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 20%;
+    --sidebar-ring: 142 71% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "tnum" on, "lnum" on;
+  }
+}
+
+@layer utilities {
+  .font-mono-tabular {
+    font-family: 'Roboto Mono', monospace;
+    font-feature-settings: "tnum" on;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .text-grade-a {
+    color: hsl(var(--grade-a));
+  }
+  .text-grade-b {
+    color: hsl(var(--grade-b));
+  }
+  .text-grade-c {
+    color: hsl(var(--grade-c));
+  }
+  .bg-grade-a {
+    background-color: hsl(var(--grade-a));
+  }
+  .bg-grade-b {
+    background-color: hsl(var(--grade-b));
+  }
+  .bg-grade-c {
+    background-color: hsl(var(--grade-c));
+  }
+  .text-info-color {
+    color: hsl(var(--info));
+  }
+  .text-warning-color {
+    color: hsl(var(--warning));
+  }
+  .text-critical-color {
+    color: hsl(var(--critical));
+  }
+  .bg-info-color {
+    background-color: hsl(var(--info));
+  }
+  .bg-warning-color {
+    background-color: hsl(var(--warning));
+  }
+  .bg-critical-color {
+    background-color: hsl(var(--critical));
+  }
+}
