@@ -9,6 +9,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Gauge,
+  Brain,
 } from 'lucide-react';
 
 const navItems = [
@@ -17,6 +18,7 @@ const navItems = [
   { to: '/suppliers', label: 'Supplier Analytics', icon: Users },
   { to: '/alerts', label: 'Alerts & Health', icon: AlertTriangle },
   { to: '/reports', label: 'Reports', icon: FileText },
+  { to: '/predictor', label: 'Cane Quality Predictor', icon: Brain },
 ];
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {

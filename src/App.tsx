@@ -9,6 +9,7 @@ import QualityTrends from "@/pages/QualityTrends";
 import SupplierAnalytics from "@/pages/SupplierAnalytics";
 import AlertsHealth from "@/pages/AlertsHealth";
 import Reports from "@/pages/Reports";
+import CaneQualityPredictor from "@/pages/CaneQualityPredictor";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/suppliers" element={<SupplierAnalytics />} />
             <Route path="/alerts" element={<AlertsHealth />} />
             <Route path="/reports" element={<Reports />} />
+            <Route path="/predictor" element={<CaneQualityPredictor />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </DashboardLayout>
